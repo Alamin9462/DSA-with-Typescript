@@ -1,9 +1,9 @@
-const TwoDArry: number[][] = [
-  [1, 2, 3, 0],
-  [9, 7, 4, 8],
-  [10, 44, 66, 99],
-  [777, 555, 77],
-];
+// const TwoDArry: number[][] = [
+//   [1, 2, 3, 0],
+//   [9, 7, 4, 8],
+//   [10, 44, 66, 99],
+//   [777, 555, 77],
+// ];
 // console.log(TwoDArry[3][2], TwoDArry[0][2], TwoDArry[2][3]);
 
 const ThreeDArray: number[][][] = [
@@ -248,3 +248,77 @@ for (let i = 0; i < arrayWithSum.length; i++) {
 }
 
 //   console.log(total);
+// find out the result here is arrayNumbers array now find out 2 index valu after sum == 9 return the index number 
+// target = 9;
+
+
+
+const twoSum = (nums:number[], target:number) =>{
+  
+   for(let i =0; i<nums.length; i++){
+    for(let j = i + 1; j<nums.length; j++){
+      if(nums[i]+ nums[j] === target){
+        return [i, j]
+      }
+    }
+     
+   } 
+    return [];
+}
+
+// const case1 = twoSum([2,7,11,15],9);
+// const case2 = twoSum([3,2,4],6);
+// const case3 = twoSum([3,3],6);
+// console.log(case1, case2, case3);
+
+
+// this fuction working on remove val and  total arrary remove feild include in -
+
+const removeElement = (nums: number[], val: number) => {
+  let k = nums.length
+    for(let i =0; i<k; i++){
+        if(nums[i] === val){
+           nums[i] = nums[k -1];
+           k--;
+           i--;
+        }
+    }
+ 
+    return k;
+
+
+
+};
+
+
+
+const caes1 = removeElement([3,2,2,3],3);
+const caes2 = removeElement([0,1,2,2,3,0,4,2],2);
+
+
+
+
+// const isPowerOfTwo = (n: number):boolean =>{
+//   if(n <= 0) return false;
+//   let result = 1 ; 
+//   for(let i = 0; i < n)
+//    if(2**n){
+//     return true;
+//    } else{
+//      return false;
+//    }
+// }
+
+// const case1 = isPowerOfTwo(6);
+
+
+const reverseString = (s: string[]) =>{
+    const reverseString = s.reverse();
+     return reverseString;
+}
+
+const case1 = reverseString(["h","e","l","l","o"]);
+const case2 = reverseString(["H","a","n","n","a","h"])
+console.log(case1, case2);
+
+
