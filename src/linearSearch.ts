@@ -10,5 +10,5 @@ const linearSearch = (arr: number[], target: number) => {
 };
 
 const arr = [10, 20, 30, 40, 50, 60, 20, 33, 40, 50];
-const target = 22;
+const target = 50;
 console.log(linearSearch(arr, target));
