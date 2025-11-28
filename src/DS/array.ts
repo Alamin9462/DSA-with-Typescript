@@ -319,6 +319,32 @@ const reverseString = (s: string[]) =>{
 
 const case1 = reverseString(["h","e","l","l","o"]);
 const case2 = reverseString(["H","a","n","n","a","h"])
-console.log(case1, case2);
+// console.log(case1, case2);
+
+
+
+// problems 11 :: coin way to make the sum
+
+const countway = (coins:number[], sum:number) =>{
+    const newArray:number[] = [];
+    
+    for(let i = 0; i <= sum; i++){
+        newArray[i] = 0;
+    }
+    newArray[0] = 1;
+    for(let j = 0; j < coins.length; j++){
+        let coin = coins[j];
+        for(let k = coin; k <= sum; k++){
+            
+        
+            
+            newArray[k] = newArray[k] + newArray[k - coin]
+        }
+    }
+    return newArray[sum]
+}
+
+const coins = [2, 5, 3, 6];
+console.log(countway(coins, 10))
 
 
